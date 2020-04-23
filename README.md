@@ -41,7 +41,7 @@ Studentų duomenų failo generavimas (10 pažymių)
 | 1000000 | 12.45678s |
 | 10000000 | 120,54512s |
 
-Studentų duomenų skaitymas
+Studentų duomenų skaitymas (10 pazymiu)
 
 | Įrašų kiekis | std::vector(class) | std::vector(struct) |
 |--|--|--|
@@ -51,7 +51,7 @@ Studentų duomenų skaitymas
 | 1000000 | 9.597s | 9.421s |
 | 10000000 | 96.254s | 94.625s |
 
-Studentų duomenų dalijimas ir išvedimas
+Studentų duomenų dalijimas ir išvedimas (10 pazymiu)
 
 | Įrašų kiekis | std::vector(class) | std::vector(struct) |
 |--|--|--|
