@@ -1,7 +1,7 @@
 # VuObjProgUzd3
 Trecia objektinio programavimo uzduotis
 
-[Antra uzduotis yra cia](https://github.com/pawleq/VuObjProg3Uzd)
+[Antra uzduotis yra čia.](https://github.com/pawleq/VuObjProg3Uzd)
 
 Paulius Mykolaitis ISI I kursas
 
