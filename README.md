@@ -63,6 +63,24 @@ Studentų duomenų dalijimas ir išvedimas (10 pazymiu)
 
 Programos realizuotos su *class* veikimas užtraunka ilgiau negu veikimas su *struct*, galimai *class* veikia ilgiau, nes yra naudojama **private** kintamieji, o struct visi yra **vieši**.
 
+Studentų duomenų skaitymas (10 pazymiu su flags)
+
+| Įrašų kiekis | std::vector(class) | O1| O2| O3| 
+|--|--|--|--|--|
+| 100000 |  0.948s | 0.953s | 0.949s | 0.953s |
+| 1000000 | 9.597s | 10.51s | 10.178s | 11.572s |
+| 10000000 | 96.254s | 106.521s | 102.215s | 112.736s |
+
+Studentų duomenų dalijimas ir išvedimas (10 pazymiu su flags)
+
+| Įrašų kiekis | std::vector(class) | O1 | O2 | O3 |
+|--|--|--|--|--|
+| 100000 |  2.308s | 2.367s | 2.359s | 2.401s |
+| 1000000 | 24.551s | 25.457s | 24.793s | 25.648s |
+| 10000000 | 245.129s | 254.153s | 255.452s | 257.423s |
+
+Programos realizuotos su skirtingos omptimizavimo veliavelemis ispudzio nepadare, su default O0 flagu programa veikia greiciausiai, asmeniskai.
+
 # Kaip naudoti programą?
 
 # v1.1
