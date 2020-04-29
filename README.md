@@ -48,7 +48,7 @@ Studentų duomenų failo generavimas (10 pažymių)
 Studentų duomenų skaitymas (10 pazymiu)
 
 | Įrašų kiekis | std::vector(class) |
-|--|--|--|--|--|
+|--|--|
 | 100000 |  0.952s | 
 | 1000000 | 9.484s | 
 | 10000000 | 95.625s |
@@ -59,7 +59,9 @@ Studentų duomenų dalijimas ir išvedimas (10 pazymiu)
 |--|--|
 | 100000 |  2.278s | 
 | 1000000 | 24.471s |
-| 10000000 | 244.847s | 
+| 10000000 | 244.347s | 
+
+Naudojant tinkamus **opetatorius**, programa veikia siek tiek greiciau, bet nezymiai.
 
 # v1.1
 
@@ -104,6 +106,24 @@ Studentų duomenų dalijimas ir išvedimas (10 pazymiu su flags)
 Programos realizuotos su skirtingos omptimizavimo veliavelemis ispudzio nepadare, su default O0 flagu programa veikia greiciausiai, asmeniskai.
 
 # Kaip naudoti programą?
+
+# v1.2
+
+1. Paleidžiame **SarasoGen.cpp** failą, kurio pagalba yra sugeneruojama studentu duomenu failas :
+  
+   *Įvedame studentu kieki bei pazymiu kieki, su kuriais bus generuojamas studentu failas*
+   
+2. Sugeneravus studentu faila, paleidziame **main.cpp**.
+
+3. Paleidus programa bus prasoma : 
+
+    *Pasirinkti, pagal ka rusiuoti studentus (1- vidurkis, 0-mediana).*
+    
+    *Pasirinkti, pagal ka rusiuoti studentus (1- vardai, 0-pavardes).*
+    
+4. Tada reikes ivesti musu sugeneruoto studentu failo pavadinimas, siuo atveju **kursiokai.txt**.
+
+5. Palaukiame tam tikra laiko tarpa, kol programa baigs veikima ir gausime programos veikimo trukme.
 
 # v1.1
 
