@@ -1,6 +1,6 @@
+
 #include "header.h"
 #include "Studentas.cpp"
-
 int ErrorFun(int nr)
 {
 	if (nr == 0)
@@ -58,8 +58,9 @@ void Writing(std::ofstream & failas, vector <Studentas> & vargsiukas, unsigned i
 	string eilute(Pilgis + Vilgis + 40, '-');
 	failas << eilute << endl;
 	for (size_t i = 0; i < vargsiukas.size(); i++) {
-		failas << setw(Pilgis + 6) << std::left << setfill(' ') << vargsiukas[i].pavarde()<< setw(Vilgis + 6) << std::left << setfill(' ') << vargsiukas[i].vardas()<< setw(16) << std::left << setfill(' ') << std::setprecision(2) << std::fixed << vargsiukas[i].galutinisVid() << vargsiukas[i].galutinisMed() << endl;
+		failas << setw(Pilgis + 6) << std::left << setfill(' ') << vargsiukas[i].pavarde() << setw(Vilgis + 6) << std::left << setfill(' ') << vargsiukas[i].vardas() << setw(16) << std::left << setfill(' ') << std::setprecision(2) << std::fixed << vargsiukas[i].galutinisVid() << vargsiukas[i].galutinisMed() << endl;
 	}
+
 }
 void vectorSplit(vector <Studentas> &studentai, vector <Studentas> &vargsiukas, int &b, int& z, unsigned int &Vilgis, unsigned int &Pilgis)
 
@@ -106,6 +107,7 @@ void SpartosAnalize()
 	cout << "Pradedamas matuoti laikas" << endl;
     std::chrono::steady_clock::time_point beginRead =
     std::chrono::steady_clock::now();
+
 	ifstream file(pav);
 	if (!file)
 	{
@@ -116,16 +118,18 @@ void SpartosAnalize()
 	{
 		studentai.emplace_back(file, Vilgis, Pilgis);
 	};
-	std::chrono::steady_clock::time_point endRead =
+    std::chrono::steady_clock::time_point endRead =
     std::chrono::steady_clock::now();
+
     std::chrono::steady_clock::time_point beginSplit =
     std::chrono::steady_clock::now();
+
 	vectorSplit(studentai, vargsiukas, b, z, Vilgis, Pilgis);
 	std::ofstream failas1 ("kietekai.txt");
 	std::ofstream failas2 ("vargsiukai.txt");
-	Writing(failas1, vargsiukas, Pilgis, Vilgis);
-	Writing(failas2, studentai, Pilgis, Vilgis);
-    std::chrono::steady_clock::time_point endSplit =
+	Writing(failas2, vargsiukas, Pilgis, Vilgis);
+	Writing(failas1, studentai, Pilgis, Vilgis);
+	std::chrono::steady_clock::time_point endSplit =
     std::chrono::steady_clock::now();
     std::cout << "Skaitymo laikas: "<< (double)std::chrono::duration_cast<std::chrono::milliseconds>(endRead - beginRead).count() / 1000<< "s" << std::endl;
     std::cout << "Dalinimo ir isvedimo laikas: "<< (double)std::chrono::duration_cast<std::chrono::milliseconds>(endSplit - beginSplit).count() / 1000<< "s" << std::endl;
