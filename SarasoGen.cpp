@@ -29,7 +29,7 @@ int main()
 			cin >> e;
 		}
 	std::random_device rd;
-    std::mt19937 mt(rd());
+    std::mt19937 mt(rd());	
 	std::uniform_int_distribution<int> dist(1, 10);
 	std::uniform_int_distribution<int> Ndist(1, 100000);
 	std::uniform_int_distribution<int> skaicius(10, 50);
