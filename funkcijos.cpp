@@ -1,6 +1,6 @@
-
 #include "header.h"
 #include "Studentas.cpp"
+
 int ErrorFun(int nr)
 {
 	if (nr == 0)
@@ -58,18 +58,22 @@ void Writing(std::ofstream & failas, vector <Studentas> & vargsiukas, unsigned i
 	string eilute(Pilgis + Vilgis + 40, '-');
 	failas << eilute << endl;
 	for (size_t i = 0; i < vargsiukas.size(); i++) {
-		failas << setw(Pilgis + 6) << std::left << setfill(' ') << vargsiukas[i].pavarde() << setw(Vilgis + 6) << std::left << setfill(' ') << vargsiukas[i].vardas() << setw(16) << std::left << setfill(' ') << std::setprecision(2) << std::fixed << vargsiukas[i].galutinisVid() << vargsiukas[i].galutinisMed() << endl;
+		failas << setw(Pilgis + 6) << std::left << setfill(' ') << vargsiukas[i].pavarde()<< setw(Vilgis + 6) << std::left << setfill(' ') << vargsiukas[i].vardas()<< setw(16) << std::left << setfill(' ') << std::setprecision(2) << std::fixed << vargsiukas[i].galutinisVid() << vargsiukas[i].galutinisMed() << endl;
 	}
 
 }
 void vectorSplit(vector <Studentas> &studentai, vector <Studentas> &vargsiukas, int &b, int& z, unsigned int &Vilgis, unsigned int &Pilgis)
 
 {
+
 	if (b == 1)
 	{
 		vector<Studentas>::iterator it = std::partition(studentai.begin(), studentai.end(), compare_by_grades);
+
 		std::copy(it, studentai.end(), std::back_inserter(vargsiukas));
+
 		studentai.erase(it, studentai.end());
+
 		studentai.shrink_to_fit();
 	}
 	else
@@ -80,6 +84,7 @@ void vectorSplit(vector <Studentas> &studentai, vector <Studentas> &vargsiukas, 
 		studentai.shrink_to_fit();
 
 	}
+
 	if (z == 0) {
 		std::sort(studentai.begin(), studentai.end(), compare_by_word);
 		std::sort(vargsiukas.begin(), vargsiukas.end(), compare_by_word);
@@ -105,8 +110,10 @@ void SpartosAnalize()
 	cout << "Iveskite studentu failo pavadinima" << endl;
 	cin >> pav;
 	cout << "Pradedamas matuoti laikas" << endl;
-    std::chrono::steady_clock::time_point beginRead =
+ std::chrono::steady_clock::time_point beginRead =
     std::chrono::steady_clock::now();
+
+
 
 	ifstream file(pav);
 	if (!file)
@@ -129,7 +136,7 @@ void SpartosAnalize()
 	std::ofstream failas2 ("vargsiukai.txt");
 	Writing(failas2, vargsiukas, Pilgis, Vilgis);
 	Writing(failas1, studentai, Pilgis, Vilgis);
-	std::chrono::steady_clock::time_point endSplit =
+    std::chrono::steady_clock::time_point endSplit =
     std::chrono::steady_clock::now();
     std::cout << "Skaitymo laikas: "<< (double)std::chrono::duration_cast<std::chrono::milliseconds>(endRead - beginRead).count() / 1000<< "s" << std::endl;
     std::cout << "Dalinimo ir isvedimo laikas: "<< (double)std::chrono::duration_cast<std::chrono::milliseconds>(endSplit - beginSplit).count() / 1000<< "s" << std::endl;
