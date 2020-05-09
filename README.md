@@ -107,6 +107,24 @@ Programos realizuotos su skirtingos omptimizavimo veliavelemis ispudzio nepadare
 
 # Kaip naudoti programą?
 
+# v1.5
+
+1. Paleidžiame **SarasoGen.cpp** failą, kurio pagalba yra sugeneruojama studentu duomenu failas :
+  
+   *Įvedame studentu kieki bei pazymiu kieki, su kuriais bus generuojamas studentu failas*
+   
+2. Sugeneravus studentu faila, paleidziame **main.cpp**.
+
+3. Paleidus programa bus prasoma : 
+
+    *Pasirinkti, pagal ka rusiuoti studentus (1- vidurkis, 0-mediana).*
+    
+    *Pasirinkti, pagal ka rusiuoti studentus (1- vardai, 0-pavardes).*
+    
+4. Tada reikes ivesti musu sugeneruoto studentu failo pavadinimas, siuo atveju **kursiokai.txt**.
+
+5. Palaukiame tam tikra laiko tarpa, kol programa baigs veikima ir gausime programos veikimo trukme.
+
 # v1.2
 
 1. Paleidžiame **SarasoGen.cpp** failą, kurio pagalba yra sugeneruojama studentu duomenu failas :
