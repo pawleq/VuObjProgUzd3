@@ -17,8 +17,18 @@ public:
 	inline string pavarde() const {return pavarde_;}
 	double galutinisVid() const {return galutinis_;}
 	double galutinisMed() const {return galutmed_;}
-	~Studentas() {};
 
+	~Studentas() {this->v_.clear();}; //destructor
+
+	Studentas& operator=(const Studentas& origin) { //copy assignment constructor
+        if (&origin == this) return *this;
+
+        this->vardas_ = origin.vardas_;
+        this->pavarde_ = origin.pavarde_;
+        this->e_ = origin.e_;
+        this->v_ = origin.v_;
+        return *this;
+    }
 	void setVardas(string vardas) {vardas_ = vardas;}
 	void setPavarde(string pavarde) {pavarde_ = pavarde;}
 	void setE(int e) {e_ = e;}
@@ -30,7 +40,7 @@ public:
 	void getAverage();
 	void getMedian();
 
-	
+
 	// operatoriai
 
 bool operator == (const Studentas&);

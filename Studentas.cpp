@@ -82,6 +82,7 @@ void Studentas::setEback() {
 	v_.pop_back();
 }
 // OPERATORIUS v1.2 (05-13)
+
 bool operator == (const Studentas& a, const Studentas & b)
 {
 	return a.galutinisVid()==b.galutinisVid() or a.galutinisMed()==b.galutinisMed();
