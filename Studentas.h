@@ -17,7 +17,17 @@ public:
 	inline string pavarde() const {return pavarde_;}
 	double galutinisVid() const {return galutinis_;}
 	double galutinisMed() const {return galutmed_;}
-	~Studentas() {};
+	~Studentas() {this->v_.clear();};
+
+	Studentas& operator=(const Studentas& origin) {
+        if (&origin == this) return *this;
+
+        this->vardas_ = origin.vardas_;
+        this->pavarde_ = origin.pavarde_;
+        this->e_ = origin.e_;
+        this->v_ = origin.v_;
+        return *this;
+    }
 
 void verification(){}
 	void setVardas(string vardas) {vardas_ = vardas;}
@@ -27,12 +37,11 @@ void verification(){}
 	void reserveV(int rsize) {v_.reserve(rsize);}
 	void setEback();
 	void FindLongest(vector<Studentas> &input, unsigned int &Vilgis, unsigned int &Pilgis);
-
 	void getAverage();
 	void getMedian();
 
-
 	// operatoriai
+
 bool operator == (const Studentas&);
 void operator +=(int b);
 int operator >>(unsigned int & b);
