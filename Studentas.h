@@ -32,24 +32,11 @@ public:
 
 	// operatoriai
 
-void operator +=(int b)
-{
-	this->v_.push_back(b);
-}
-int operator >>(unsigned int & b)
-{	if (this->vardas_.size()>b)
-	return  this->vardas_.size();
-	else
-	return b;
-}
-
-int operator <<(unsigned int & b)
-{	if (this->pavarde_.size()>b)
-	return  this->pavarde_.size();
-	else
-	return b;
-}
-	};
+bool operator == (const Studentas&);
+void operator +=(int b);
+int operator >>(unsigned int & b);
+int operator <<(unsigned int & b);
+};
 bool compare_by_word(const Studentas& lhs, const Studentas& rhs);
 bool compare_by_name(const Studentas& lhs, const Studentas& rhs);
 bool compare_by_grades(const Studentas& lhs);
