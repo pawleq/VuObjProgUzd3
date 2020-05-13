@@ -32,22 +32,12 @@ void verification(){}
 
 
 	// operatoriai
-
+bool operator == (const Studentas&);
 void operator +=(int b);
-
 int operator >>(unsigned int & b);
-
-
 int operator <<(unsigned int & b);
 
 	};
-
-
-
-
-
-
-
 bool compare_by_word(const Studentas& lhs, const Studentas& rhs);
 bool compare_by_name(const Studentas& lhs, const Studentas& rhs);
 bool compare_by_grades(const Studentas& lhs);
