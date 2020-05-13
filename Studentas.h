@@ -17,6 +17,7 @@ public:
 	inline string pavarde() const {return pavarde_;}
 	double galutinisVid() const {return galutinis_;}
 	double galutinisMed() const {return galutmed_;}
+	~Studentas() {};
 
 void verification(){}
 	void setVardas(string vardas) {vardas_ = vardas;}
