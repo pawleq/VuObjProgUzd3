@@ -17,6 +17,7 @@ public:
 	inline string pavarde() const {return pavarde_;}
 	double galutinisVid() const {return galutinis_;}
 	double galutinisMed() const {return galutmed_;}
+	~Studentas() {};
 
 	void setVardas(string vardas) {vardas_ = vardas;}
 	void setPavarde(string pavarde) {pavarde_ = pavarde;}
@@ -29,7 +30,7 @@ public:
 	void getAverage();
 	void getMedian();
 
-
+	
 	// operatoriai
 
 bool operator == (const Studentas&);
