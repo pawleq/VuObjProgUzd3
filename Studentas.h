@@ -22,11 +22,11 @@ public:
 
 	Studentas& operator=(const Studentas& origin) { //copy assignment constructor
         if (&origin == this) return *this;
-
         this->vardas_ = origin.vardas_;
         this->pavarde_ = origin.pavarde_;
         this->e_ = origin.e_;
-        this->v_ = origin.v_;
+        this->galutinis_ = origin.galutinis_;
+        this->galutmed_ = origin.galutmed_;
         return *this;
     }
 	void setVardas(string vardas) {vardas_ = vardas;}
