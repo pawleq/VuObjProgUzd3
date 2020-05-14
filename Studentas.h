@@ -29,7 +29,7 @@ public:
         return *this;
     }
 
-void verification(){}
+    void verification(){}
 	void setVardas(string vardas) {vardas_ = vardas;}
 	void setPavarde(string pavarde) {pavarde_ = pavarde;}
 	void setE(int e) {e_ = e;}
