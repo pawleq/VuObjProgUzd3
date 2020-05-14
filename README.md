@@ -109,6 +109,8 @@ Programos realizuotos su skirtingos omptimizavimo veliavelemis ispudzio nepadare
 
 # v1.5
 
+# Sukurtos dvi: bazinė klasę, skirtą bendrai aprašyti žmogų ir tuomet iš jos išvestinę (derived) klasė - Studentas.
+
 1. Paleidžiame **SarasoGen.cpp** failą, kurio pagalba yra sugeneruojama studentu duomenu failas :
   
    *Įvedame studentu kieki bei pazymiu kieki, su kuriais bus generuojamas studentu failas*
@@ -127,6 +129,8 @@ Programos realizuotos su skirtingos omptimizavimo veliavelemis ispudzio nepadare
 
 # v1.2
 
+# Realizuota visi reikiami ("Rule of three") ir tinkami (turinčius prasmę) operatoriai turimai Studentas klasei.
+
 1. Paleidžiame **SarasoGen.cpp** failą, kurio pagalba yra sugeneruojama studentu duomenu failas :
   
    *Įvedame studentu kieki bei pazymiu kieki, su kuriais bus generuojamas studentu failas*
@@ -144,6 +148,8 @@ Programos realizuotos su skirtingos omptimizavimo veliavelemis ispudzio nepadare
 5. Palaukiame tam tikra laiko tarpa, kol programa baigs veikima ir gausime programos veikimo trukme.
 
 # v1.1
+
+# Vietoj **struct** yra naudojama **class**
 
 1. Paleidžiame **SarasoGen.cpp** failą, kurio pagalba yra sugeneruojama studentu duomenu failas :
   
