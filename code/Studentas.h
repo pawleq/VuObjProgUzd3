@@ -28,7 +28,14 @@ public:
         this->galutmed_ = origin.galutmed_;
         return *this;
     }
-
+    Studentas(const Studentas& student)
+    {
+        this->vardas_ = student.vardas_;
+        this->pavarde_ = student.pavarde_;
+        this->e_ = student.e_;
+        this->galutinis_ = student.galutinis_;
+        this->galutmed_ = student.galutmed_;
+    }
     void verification(){}
 	void setVardas(string vardas) {vardas_ = vardas;}
 	void setPavarde(string pavarde) {pavarde_ = pavarde;}

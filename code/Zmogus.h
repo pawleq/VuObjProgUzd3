@@ -2,11 +2,12 @@
 #include "header.h"
 	class Zmogus {
 	protected:
+
 		string vardas_;
 		string pavarde_;
-	public:
+        Zmogus(string pavarde="",string vardas=""):pavarde_(pavarde),vardas_(vardas){}
 
-			Zmogus(string pavarde="",string vardas=""):pavarde_(pavarde),vardas_(vardas){}
+	public:
 
 		virtual void verification() = 0;
 		void setPav(string pavarde) {pavarde_=pavarde;}
