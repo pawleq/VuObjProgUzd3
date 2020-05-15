@@ -17,9 +17,9 @@ public:
 	inline string pavarde() const {return pavarde_;}
 	double galutinisVid() const {return galutinis_;}
 	double galutinisMed() const {return galutmed_;}
-	~Studentas() {this->v_.clear();}; //destructor
+	~Studentas() {this->v_.clear();};
 
-	Studentas& operator=(const Studentas& origin) { //copy assignment constructor
+	Studentas& operator=(const Studentas& origin) {
         if (&origin == this) return *this;
         this->vardas_ = origin.vardas_;
         this->pavarde_ = origin.pavarde_;
@@ -28,8 +28,15 @@ public:
         this->galutmed_ = origin.galutmed_;
         return *this;
     }
-
-void verification(){}
+    Studentas(const Studentas& student)
+    {
+        this->vardas_ = student.vardas_;
+        this->pavarde_ = student.pavarde_;
+        this->e_ = student.e_;
+        this->galutinis_ = student.galutinis_;
+        this->galutmed_ = student.galutmed_;
+    }
+    void verification(){}
 	void setVardas(string vardas) {vardas_ = vardas;}
 	void setPavarde(string pavarde) {pavarde_ = pavarde;}
 	void setE(int e) {e_ = e;}
