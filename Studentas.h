@@ -20,7 +20,7 @@ public:
 
 	~Studentas() {this->v_.clear();}; //destructor
 
-	Studentas& operator=(const Studentas& origin) { //copy assignment constructor
+	Studentas& operator=(const Studentas& origin) { //copy assignment
         if (&origin == this) return *this;
         this->vardas_ = origin.vardas_;
         this->pavarde_ = origin.pavarde_;
@@ -28,6 +28,14 @@ public:
         this->galutinis_ = origin.galutinis_;
         this->galutmed_ = origin.galutmed_;
         return *this;
+    }
+    Studentas(const Studentas& student)
+    {
+        this->vardas_ = student.vardas_;
+        this->pavarde_ = student.pavarde_;
+        this->e_ = student.e_;
+        this->galutinis_ = student.galutinis_;
+        this->galutmed_ = student.galutmed_;
     }
 	void setVardas(string vardas) {vardas_ = vardas;}
 	void setPavarde(string pavarde) {pavarde_ = pavarde;}
